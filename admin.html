@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة تحكم الأدمن</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="login-panel">
+  <h2>تسجيل الدخول</h2>
+  <input type="password" id="password" placeholder="أدخل كلمة المرور">
+  <button onclick="login()">دخول</button>
+</section>
+
+<section id="admin-panel" style="display:none;">
+  <h2>لوحة التحكم</h2>
+  <input type="text" id="postTitle" placeholder="عنوان البوست">
+  <textarea id="postContent" placeholder="محتوى البوست"></textarea>
+  <input type="file" id="postImage" accept="image/*,video/*">
+  <button onclick="addPost()">نشر البوست</button>
+
+  <h3>تغيير اللوجو</h3>
+  <input type="file" id="logoInput" accept="image/*">
+  <button onclick="changeLogo()">تغيير اللوجو</button>
+
+  <h3>البوستات الحالية</h3>
+  <div id="posts"></div>
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
